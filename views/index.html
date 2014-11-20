@@ -1,6 +1,17 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <h1>{{title}}</h1>
-    <p>Welcome to {{title}}</p>
+<div id="left">
+  <ul>
+    {% for quote in quotes %}
+    <li data-id="{{quote.id}}"><a href="#">{{ quote.text }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div id="right">
+  <p class="quote">{{quote.text}}<p>
+  <p class="author">{{quote.author}}</p>
+</div>
+
 {% endblock %}
