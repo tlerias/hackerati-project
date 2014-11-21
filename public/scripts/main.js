@@ -1,5 +1,5 @@
 // JQuery Way
-// JQuery version can be found in the browser at localhost:3000/pure
+// JQuery version can be found in the browser at localhost:3000/jquery
 // Also did the project in angular. Can view angular version in the browser at localhost:3000/
 
 $( document ).ready( function () {
@@ -12,7 +12,8 @@ $( document ).ready( function () {
     evt.stopPropagation();
 
     $.ajax({
-      url: "/quote/"+ $( this ).data( 'id' )
+      url: '/quote/'+ $( this ).data( 'id' ),
+      type: 'GET'
     }).done(function( data ) {
       $( '.quote' ).text( data.text );
       $( '.author' ).text( data.author );

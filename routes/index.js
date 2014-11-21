@@ -21,7 +21,7 @@ router.get('/quote/:id', function(req, res) {
   res.send(404);
 } );
 // for jquery version
-router.get('/pure', function(req, res) {
+router.get('/jquery', function(req, res) {
   res.render('index', {quotes: Quotes });
 } );
 

@@ -1,10 +1,12 @@
-<div id="left">
+<h1> Quotes </h1>
+<h4> Click a quote to see the author </h4>
+<div class="left">
   <ul ng-repeat="quote in quotes" >
     <li><a ng-click='getQuote(quote)'>{{ quote.text }}</a></li>
   </ul>
 </div>
 
-<div id="right">
+<div class="right">
   <p class="quote">{{quote.text}}<p>
   <p class="author">{{quote.author}}</p>
 </div>
